@@ -4,19 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 
     <title>Caça ao Tesouro</title>
 </head>
 
-<body>
+<body onload="plotarMatriz()">
     <header>
+        <div class="container-jogo">
+            <img src="./imgs/astrobomb_logo.png" alt="">
+            <a href="./index.html">Voltar</a>
+        </div>
 
     </header>
-    <div class="caca-ao-tesouro" id="campo">
+    <div class="matriz">
+        <div class="container-jogo">
+            <div class="caca-ao-tesouro" id="campo">
 
+            </div>
+        </div>
     </div>
-    <button onclick="plotarMatriz()">bababaab</button>
+
 </body>
 <script>
     let minhaMatriz = [];
@@ -24,18 +32,21 @@
     function plotarMatriz() {
         let qtdLinhas = 5;
         let qtdColunas = 5;
-
-        let valorInicial = 5;
+        let distribuicaoItens = (Math.random() * 2).toFixed(0);
+        let tesouros = 0;
 
         for (let linha = 0; linha < qtdLinhas; linha++) {
             minhaMatriz[linha] = [];
             for (let coluna = 0; coluna < qtdColunas; coluna++) {
-                minhaMatriz[linha][coluna] = (Math.random()* 2).toFixed(0);
+
+                minhaMatriz[linha][coluna] = ``;
 
                 // Já preenchi, agora vou adicionar o HTML
                 campo.innerHTML +=
                     `
-                        <div class="item">${minhaMatriz[linha][coluna]}</div>
+                        <div class="container-item">
+                            <div class="item">${minhaMatriz[linha][coluna]}</div>
+                        </div>
                     `;
             }
         }
