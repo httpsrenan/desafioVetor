@@ -22,16 +22,15 @@
     let minhaMatriz = [];
 
     function plotarMatriz() {
-        let linha = 5;
-        let coluna = 5;
+        let qtdLinhas = 5;
+        let qtdColunas = 5;
 
         let valorInicial = 5;
 
         for (let linha = 0; linha < qtdLinhas; linha++) {
             minhaMatriz[linha] = [];
             for (let coluna = 0; coluna < qtdColunas; coluna++) {
-                minhaMatriz[linha][coluna] = valorInicial;
-                valorInicial += 5;
+                minhaMatriz[linha][coluna] = (Math.random()* 2).toFixed(0);
 
                 // Já preenchi, agora vou adicionar o HTML
                 campo.innerHTML +=
