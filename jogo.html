@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet">
+
+    <title>Caça ao Tesouro</title>
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <div class="caca-ao-tesouro" id="campo">
+
+    </div>
+    <button onclick="plotarMatriz()">bababaab</button>
+</body>
+<script>
+    let minhaMatriz = [];
+
+    function plotarMatriz() {
+        let qtdLinhas = 5;
+        let qtdColunas = 5;
+
+        let valorInicial = 5;
+
+        for (let linha = 0; linha < qtdLinhas; linha++) {
+            minhaMatriz[linha] = [];
+            for (let coluna = 0; coluna < qtdColunas; coluna++) {
+                minhaMatriz[linha][coluna] = (Math.random()* 2).toFixed(0);
+
+                // Já preenchi, agora vou adicionar o HTML
+                campo.innerHTML +=
+                    `
+                        <div class="item">${minhaMatriz[linha][coluna]}</div>
+                    `;
+            }
+        }
+    }
+
+</script>
+
+</html>

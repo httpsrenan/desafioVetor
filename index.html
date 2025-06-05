@@ -1,46 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo Vetor</title>
     <link rel="stylesheet" href="style.css">
-
-    <title>Caça ao Tesouro</title>
 </head>
-
 <body>
-    <header>
+    <div class="div_container">
+        <img src="astrobomb_logo.png" alt="">
+        <h1>Seja bem vindo!</h1>
 
-    </header>
-    <div class="caca-ao-tesouro" id="campo">
-
+        <a href="jogo.html"><button>Jogue agora!</button></a>
     </div>
-    <button onclick="plotarMatriz()">bababaab</button>
 </body>
-<script>
-    let minhaMatriz = [];
-
-    function plotarMatriz() {
-        let qtdLinhas = 5;
-        let qtdColunas = 5;
-
-        let valorInicial = 5;
-
-        for (let linha = 0; linha < qtdLinhas; linha++) {
-            minhaMatriz[linha] = [];
-            for (let coluna = 0; coluna < qtdColunas; coluna++) {
-                minhaMatriz[linha][coluna] = (Math.random()* 2).toFixed(0);
-
-                // Já preenchi, agora vou adicionar o HTML
-                campo.innerHTML +=
-                    `
-                        <div class="item">${minhaMatriz[linha][coluna]}</div>
-                    `;
-            }
-        }
-    }
-
-</script>
-
 </html>
